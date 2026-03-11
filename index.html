@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Thư viện tài liệu</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f5f5;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+.folder{
+background:#eee;
+padding:10px;
+margin-top:20px;
+border-radius:6px;
+}
+
+.note{
+padding:8px;
+margin-top:5px;
+cursor:pointer;
+color:#007bff;
+}
+
+.note:hover{
+text-decoration:underline;
+}
+
+.reader{
+display:none;
+}
+
+.back{
+margin-bottom:15px;
+background:#007bff;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.copy{
+margin-bottom:10px;
+background:#28a745;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.copy:hover{
+background:#1e7e34;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📚 Thư viện tài liệu</h1>
+
+<div id="library"></div>
+
+<div id="reader" class="reader">
+
+<button class="back" onclick="back()">⬅ Quay lại</button>
+
+<h2 id="title"></h2>
+
+<button class="copy" onclick="copyCode()">📋 Copy code</button>
+
+<pre id="content"></pre>
+
+</div>
+
+</div>
+
+<script>
+
+let data={
+
+"📘 Bài 25":[
+
+{
+title:"Nhiệm vụ 1",
+content:`s = input("Nhập các số nguyên cách nhau bởi dấu cách: ")
+sline = s.split()
+n = len(sline)
+
+nline = []
+
+for x in sline:
+    nline.append(int(x))
+
+print("Bạn đã nhập", n, "số.")
+
+for k in nline:
+    print(k, end=" ")`
+},
+
+{
+title:"Nhiệm vụ 2",
+content:`s = input("Nhập đoạn văn bản: \n")
+sline = s.split()
+skq = " ".join(sline)
+print(skq)`
+},
+
+{
+title:"Nhiệm vụ 3",
+content:`n = int(input("Nhập số học sinh trong lớp: "))
+
+ten = []
+hodem = []
+
+for i in range(n):
+    s = input("Nhập họ tên học sinh thứ " + str(i+1) + ": ")
+    sline = s.split()
+    m = len(sline) - 1
+
+    ten.append(sline[m])
+    del sline[m]
+
+    hodem.append(" ".join(sline))
+
+print("Danh sách học sinh:")
+
+for i in range(n):
+    print(ten[i], hodem[i])`
+},
+
+{
+title:"Luyện tập 1",
+content:`s=input("Nhập dãy các số")
+A=s.split(" ")
+t=0
+for i in range(0, len(A)):
+	t=t+int(A[i])
+print(t)`
+},
+
+{
+title:"Luyện tập 2",
+content:`s=input("Nhập họ tên")
+A=s.split(" ")
+print("Tên: ", A[len(A)-1])
+print("Tên đệm: ", A[len(A)-2])`
+},
+
+{
+title:"Vận dụng 1",
+content:`s=input("Nhập hai số tự nhiên")
+
+A=s.split(" ")
+
+a=int(A[0])
+
+b=int(A[1])
+
+r = a % b
+
+while r != 0:
+
+    a = b
+
+    b = r
+
+    r = a % b
+
+print("ƯCLN của a và b là: ",b)`
+},
+
+{
+title:"Vận dụng 2",
+content:`n=int(input("Nhập số tự nhiên n"))
+
+A=[]
+
+t=0
+
+for i in range(0,n):
+
+    A.append(input("Nhập họ tên"))
+
+s=input("Nhập một tên")
+
+for i in range(0,n):
+
+    B=A[i].split()
+
+    if s == B[len(B)-1]:
+
+t=t+1
+
+print("Vậy trong lớp có số bạn cùng tên đó là: ",t)`
+}
+
+],
+
+"📗 Bài 26":[
+
+{
+title:"Nhiệm vụ 1",
+content:`def meeting():
+	ten = input("Nhâp ho tên cua em:")
+	print("Xin chao ",ten)
+meeting()`
+},
+
+{
+title:"Nhiệm vụ 2",
+content:`def prime(n):
+	C=0
+	k=1
+while k< n:
+	if n%k == 0:
+	C=C+1
+	k=k+1
+if C==1:
+	return True
+else:
+	return False`
+},
+
+{
+title:"Luyện tập 1",
+content:`def prime(n):
+
+    c=0
+
+    k=1
+
+    while k<n:
+
+        if n%k==0:
+
+            c=c+1
+
+        k=k+1
+
+    if c==1:
+
+        return True
+
+    else:
+
+        return False
+
+n=int(input("Nhập số tự nhiên n:"))
+
+for i in range(1,n+1):
+
+    if n%i==0 and prime(i)==True:
+
+        print(i, end=" ")`
+},
+
+{
+title:"Luyện tập 2",
+content:`def numbers(s):
+
+    t=0
+
+    for ch in s:
+
+        if '0'<=ch<='9':
+
+t=t+1
+
+    return t`
+},
+
+{
+title:"Vận dụng 2",
+content:`def numbers(s):
+
+    t=0
+
+    for ch in s:
+
+        if '0'<=ch<='9':
+
+             t=t+1
+
+    return t
+
+def characters(s):
+
+    t=0
+
+    for ch in s:
+
+        if 'a'<=ch<='z' or 'A'<=ch<='Z':
+
+             t=t+1
+
+    return t
+
+s=input("Nhập xâu kí tự")
+
+print("Số kí tự chữ số trong xâu s là: ", numbers(s))
+
+print("Số kí tự chữ cái trong xâu s là: ", characters(s))`
+}
+
+]
+
+};
+
+function render(){
+
+let library=document.getElementById("library");
+
+library.innerHTML="";
+
+for(let folder in data){
+
+let html=`<div class="folder"><h3>${folder}</h3>`;
+
+data[folder].forEach((note,index)=>{
+
+html+=`<div class="note" onclick="openNote('${folder}',${index})">📄 ${note.title}</div>`;
+
+});
+
+html+="</div>";
+
+library.innerHTML+=html;
+
+}
+
+}
+
+function openNote(folder,index){
+
+let note = data[folder][index];
+
+document.getElementById("library").style.display="none";
+document.getElementById("reader").style.display="block";
+
+document.getElementById("title").innerText = note.title;
+document.getElementById("content").innerText = note.content;
+
+}
+
+function back(){
+
+document.getElementById("library").style.display="block";
+document.getElementById("reader").style.display="none";
+
+}
+
+function copyCode(){
+
+let text=document.getElementById("content").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Đã copy code");
+
+}
+
+render();
+
+</script>
+
+</body>
+</html>
