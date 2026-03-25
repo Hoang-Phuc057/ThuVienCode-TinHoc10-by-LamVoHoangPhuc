@@ -320,8 +320,108 @@ print("Số kí tự chữ số trong xâu s là: ", numbers(s))
 print("Số kí tự chữ cái trong xâu s là: ", characters(s))`
 }
 
-]
+],
 
+"📗 Bài 27":[
+
+{
+title:"Nhiệm vụ 1",
+content:`def f_sum(A,b):
+    S=0
+    for x in A:
+        if b==0:
+            S=S+x
+        else:
+            if x>0:
+                S=S+x
+    return S`
+},
+
+{
+title:"Nhiệm vụ 2",
+content:`def f_dem(msg, sep):
+
+xlist = msg.split(sep)
+
+return len(xlist)`
+},
+
+{
+title:"Nhiệm vụ 3",
+content:`def merge_str(s1, s2):
+S=""
+11 = len(s1)
+12= len(s2)
+1 = min(l1,12)
+for i in range(1):
+S=s+s1[i]+s2[i]
+if 11<12:
+for i in range(l,12):
+S=S+s[i]
+if l2 < l1:
+for i in range(l,11):
+S =S+ s1[i]
+return S`
+}
+
+],
+
+"📗 Bài 28":[
+
+{
+title:"Nhiệm vụ 1",
+content:`def Select(A,x):
+B=[]
+for k in range(len(A)):
+if A[k]>=x:
+B.append(A[k])
+return B`
+},
+
+{
+title:"Nhiệm vụ 2",
+content:`def Tach_tu(Str, c):
+A = Str.split()
+for k in range(len(A)):
+if c == 0:
+A[k] = A[k].upper()
+if c == 1:
+A[k] = A[k].lower()
+if c == 2:
+A[k] = A[k].title()
+return A`
+},
+
+{
+title:"Nhiệm vụ 3",
+content:`def Nhap_Dulieu():
+s = input("Nhap các so nguyên cách nhau boi dau cách:")
+A=s.split()
+for k in range(len(A)):
+A[k]=int(A[k])
+return A
+def getB(A):
+B=[]
+for x in A:
+if×>0:
+B.append(x)
+return B
+def getc(A):
+C =[]
+for x in A:
+ifx<0:
+C.append(x)
+return C
+# Chuong trinh chính
+A= Nhap_Dulieu()
+print("Danh sách A:",A)
+B = getB(A)
+C= getc(A)
+print("Danh sách B:",B)
+print("Danh sách C:",C)`
+},
+
+]
 };
 
 function render(){
