@@ -441,6 +441,73 @@ for k in range(n):
 print("Dãy da nhâp:",A)`
 },
 
+],
+
+"📗 Bài 31":[
+
+{
+title:"Nhiệm vụ 1",
+content:`n = int(input("Nhap so ty nhiên n:"))
+m=n
+k=2
+NT=[]
+while m > 1:
+    while m%k!= 0:
+        k=k+1
+    NT.append(k)
+    m=m//k
+count = len(NT)
+if count ==0:
+    print(n,"khong là so nguyen to")
+elif count ==1:
+    print(n,"la so nguyen to")
+else:
+    print(n,"la hop so")
+    print(n，“=",end = " ")
+    for i in range(count):
+        if i< count - 1:
+            print(NT[i],"x",end ="")
+        else:
+            print(NT[i])`
+},
+
+{
+title:"Nhiệm vụ 2",
+content:`def sqrt(x):
+    return x**0.5
+	
+def NhapDL():
+    s= input("Nhâp ba so a, b,nccách nhau boi dãu cách:
+    snum = s.split()
+    return float(snum[θ]),float(snum[1]),float(snum[2]
+	
+def GiaiPT1(b,c):
+    if b!=0:
+        print("Phuang trinh co mot nghiem duy nhat:",round(-c/b,1))
+    elif c ==0:
+	    print("Phuong trinh có vo so nghiêm")
+    else:
+        print("Phuong trinh vo nghiem")
+def GiaiPT2(a,b,c):
+    if a == 0:
+	    GiaiPT1(b,c)
+    else:
+        delta = b*b-4*a*c
+        if delta >θ:
+            x1 =(-b + sqrt(delta))/(2*a)
+            x2=(-b-sqrt(delta))/(2*a)
+            print("Phuong trinh co hai nghiem khac biet";
+            print("x1 =",round(x1,1),"x2 =",round(x2，1))
+        elif delta ==0:
+            x=（-b/（2*a)）
+            print("Phuong trinh có nghiem kép")
+			print("x1,2=",round(x，1))
+        else:
+            print("Phuong trinh vo nghiem")
+# Chuong trinh chính
+a,b,c=NhapDL()
+GiaiPT2(a,b,c)`
+},
 ]
 };
 
